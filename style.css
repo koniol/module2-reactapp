@@ -1,4 +1,4 @@
-.box{
-	float:left;
-}
+img{border: 1px solid black; padding: 5px; height: 280px;}
+
+.box{float:left; width: 330px;}
 .title{ width: 260px; text-overflow: ellipsis;white-space: nowrap; overflow: hidden;}
