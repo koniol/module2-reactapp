@@ -1,4 +1,6 @@
 
+
+
 var favFilms = [
     {
         id : 1,
@@ -38,7 +40,8 @@ var films = favFilms.map(movie =>{
             React.createElement('h1', {className: 'title'}, movie.title),
             React.createElement('p', {}, 'Cena ' + movie.price + ' PLN'),
             React.createElement('img', {src: movie.img}),
-            React.createElement('p', {}, movie.dscrpt)
+            React.createElement('p', {className: 'toggle'}, movie.dscrpt),
+            React.createElement('button', {className: 'show'}, 'Pokaz')
         );
 });
 
@@ -50,3 +53,11 @@ var element =
   );
 
 ReactDOM.render(element, document.getElementById('react-app'));
+
+
+$( ".show" ).click(function() {
+    console.log($(this).prev());
+  $(this).prev('.toggle').toggle( "slow", function() {
+    // console.log($( ".box" ).next('.toggle'));
+  });
+});
