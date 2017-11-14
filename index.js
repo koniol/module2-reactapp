@@ -56,8 +56,10 @@ ReactDOM.render(element, document.getElementById('react-app'));
 
 
 $( ".show" ).click(function() {
-    console.log($(this).prev());
-  $(this).prev('.toggle').toggle( "slow", function() {
-    // console.log($( ".box" ).next('.toggle'));
-  });
+    var text = $(this).text();
+    text = (text === 'Zwiń' ? 'Pokaz' : 'Zwiń');
+    
+    $(this).text(text); 
+    $(this).prev('.toggle').toggle( "slow", function() {
+    });
 });
