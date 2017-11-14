@@ -27,8 +27,8 @@ var favFilms = [
 ];
 
 var films = favFilms.map(movie =>{
-    return React.createElement('li', {key: movie.id}, 
-            React.createElement('h1', {}, movie.title),
+    return React.createElement('li', {key: movie.id, className: 'noDecoration'}, 
+            React.createElement('h1', {className: 'title'}, movie.title),
             React.createElement('p', {}, 'Cena ' + movie.price),
             React.createElement('img', {src: movie.img})
         );
@@ -40,6 +40,5 @@ var element =
     React.createElement('h1', {}, 'Lista filmów'),
     React.createElement('ul', {}, films)
   );
-
 
 ReactDOM.render(element, document.getElementById('react-app'));
