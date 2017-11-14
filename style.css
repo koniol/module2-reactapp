@@ -1,3 +1,4 @@
 .box{
 	float:left;
 }
+.title{ width: 260px; text-overflow: ellipsis;white-space: nowrap; overflow: hidden;}
